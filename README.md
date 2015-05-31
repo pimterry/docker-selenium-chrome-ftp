@@ -16,10 +16,14 @@ This image provides:
 To use it, run:
 
 ```
-docker run -p 4444:4444 -p 21:21 fe1a9c
+sudo docker pull pimterry/selenium-chrome-ftp
+sudo docker run -p 4444:4444 -p 21:21 pimterry/selenium-chrome-ftp
 ```
 
 You can then connect to the FTP server on port 21 locally, and Selenium on port 4444.
 
-The FTP server allows full anonymous access for reading and uploading (within a chroot in the container). This
-fine for local development, but is a reasonable security risk otherwise. Do not expose this to the internet!
+Files should be written into the /uploaded folder, which is available on the server at /var/ftp/uploaded.
+
+Note that the FTP server allows full anonymous access for reading and uploading (within a chroot in the
+container). This is fine for local development, but is a reasonable security risk otherwise. Do not expose
+this to the internet!
