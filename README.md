@@ -1,5 +1,4 @@
 # docker-selenium-chrome-ftp
-Docker image providing Selenium and FTP developing.
 
 For some tasks, such as file upload, or developing browser extensions, you need to have files available 
 locally within the Selenium container. The best way to do that would be with shared volumes. This image 
